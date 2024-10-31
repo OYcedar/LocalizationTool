@@ -16,7 +16,7 @@ from typing import Callable, Union, Tuple, List, Dict, Set
 import numpy as np
 from PIL import ImageFont, ImageDraw, Image
 
-__version__ = 310
+__version__ = 311
 
 try:
     from libutil import tile_t, tbl_t, writebytes, writeimage, filter_loadfiles, filter_loadimages, valid_tile, load_tbl, save_tbl
@@ -520,7 +520,7 @@ def cli(cmdstr=None):
     for t in [p_tbl_make, p_tbl_align, p_tbl_merge, p_font_make, p_font_extract]:
         t.add_argument("-o", "--outpath", default="out")
         t.add_argument("--log_level", default="info", help="set log level", 
-            choices=("none", "critical", "error", "warnning", "info", "debug"))
+            choices=("none", "critical", "error", "warning", "info", "debug"))
         
     # tbl operations
     for t in [p_tbl_make, p_tbl_align, p_tbl_merge]:
